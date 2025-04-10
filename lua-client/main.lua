@@ -1,7 +1,7 @@
 local socket = require("socket")
 
 
-local client = socket.connect("127.0.0.1", 3000)
+local client = socket.connect("127.0.0.1", 4000)
 
 
 if client then
@@ -13,5 +13,5 @@ if client then
    
     cliente:close()
 else
-    print("Cannot connect to the Node.js server")
+    print("Cannot connect to the TCP server")
 end
