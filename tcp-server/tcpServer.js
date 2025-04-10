@@ -14,8 +14,7 @@ const server= net.createServer((socket)=>{
     console.log('client disconnected');
   });
 
-  socket.write('hello\r\n');
-  socket.pipe(socket);
+  socket.write('Welcome to the TCP Server');
 
 
 })
@@ -28,3 +27,5 @@ server.on('error',(err)=>{
 server.listen(process.env.PORT_TCP,'127.0.0.1',()=>{
     console.log('TCP SERVER ON PORT: ',process.env.PORT_TCP)
 })
+
+module.exports=server;
