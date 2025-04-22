@@ -1,4 +1,4 @@
-local socket = require("socket")
+local socket = require("socket");
 
 
 local client = socket.connect("127.0.0.1", 4000)
@@ -7,11 +7,13 @@ local client = socket.connect("127.0.0.1", 4000)
 if client then
     print("Connection success")
 
-    
-    cliente:send("1\n")
+    socket.sleep(1)
+    client:send("1")
+
+    client:close()
 
    
-    cliente:close()
+    
 else
     print("Cannot connect to the TCP server")
 end
